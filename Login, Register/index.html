@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Form Login dan Register</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="=width=device=width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title-login">Form Login</div>
+        <div class="title-signup">Form Register</div>
+      </div>
+      <div class="form-container"></div>
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="Login" />
+        <input type="radio" name="slide" id="Signup" />
+        <label for="login" class="slide-login">Login</label>
+        <label for="Signup" class="slide-signup">registrasi</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="#" class="login">
+            <div class="field">
+                <input type="text" placeholder="Masukkan Email" required>
+                <div class="field">
+                    <input type="password" placeholder="Masukkan password" required>
+            </div>
+            <div class="pass-link">
+                <a href="#">Lupa Password?</a>
+            </div>
+            <div class="field-btn" >
+                <div class="btn-layer"></div>
+                <input type="submit" value="login">
+            </div>
+            <div class="signup-link">
+                belum punya akun? <a href="">Daftar Sekarang</a>
+            </div>
+        </form>
+        <form action="#" class="signup">
+            <div class="field">
+                <input type="text" placeholder="Masukkan Email" required>
+            </div>
+            <div class="field">
+                <input type="password" placeholder="Masukkan password" required>
+        </div>
+        <div class="field">
+            <input type="password" placeholder="konfirmasi password" required>
+        </div>
+        <div class="field-btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="signup">
+        </div>
+        </form>
+      </div>
+    </div>
+    <script>
+        const logintext= document.querySelector(".title-text .login");
+        const loginform= document.querySelector("form .login");
+        const loginbtn= document.querySelector("label .login");
+        const signupbtn= document.querySelector("label .signup");
+        const signuplink= document.querySelector("form .signup[-link a");
+        signupbtn.onclick= (()=>{
+            loginform.style.marginleft= "-50%";
+            logintext.style.marginleft= "-50%";
+        })
+        loginbtn.onclick= (()=>{
+            loginform.style.marginleft= "0%";
+            logintext.style.marginleft= "0%";
+        })
+        signuplink.onclick= (()=>{
+            signupbtn.onclick();
+            return false;
+        })
+        
+    </script>
+  </body>
+</html>
